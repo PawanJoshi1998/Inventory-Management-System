@@ -50,6 +50,7 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
+                                <a href="{{url('/products')}}">Products</a>
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
@@ -75,6 +76,8 @@
         <main class="py-4">
             @yield('content')
         </main>
-    </div>
+        </div>
+
+
 </body>
 </html>

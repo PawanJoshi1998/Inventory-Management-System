@@ -1,4 +1,13 @@
-<h2>This is product index page</h2>
+@extends('layouts.app')
+
+
+@section('content')
+<div class="container">
+	<h2>This is product index page</h2>
+
+	<a href="{{('products/create')}}">Create Products</a>
+<div class="row justify-content-center">
+
 
 <table border="1">
 	<tr>
@@ -26,5 +35,5 @@
 
 
 <?php } ?>
-
 </table>
+@endsection

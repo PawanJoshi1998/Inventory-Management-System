@@ -14,4 +14,20 @@ class productscontroller extends Controller
     	
     	return view('products.index', compact('products'));
     }
+
+    public function create(){
+
+    	// dd('This is create function');
+    	return view('products.create');
+    }
+
+    public function store(Request $request){
+
+    	$products = $request->all();
+    	$products['user_id'] =1;
+    	product::create($products);
+    	return redirect(url('products'));
+
+
+    }
 }
